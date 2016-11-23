@@ -5,7 +5,7 @@
 
 int main()
 {
-    long double n = 1000000;
+    long double n = 3*(10000000/4)*0.9825045;
 
 	clock_t tStart = clock();
 
