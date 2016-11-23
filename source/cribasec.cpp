@@ -7,7 +7,7 @@ int CribaEratostenes(long double n)
 {
 
 	bool prime[int(n) + 1];
-	memset(prime, true, sizeof(prime))
+	memset(prime, true, sizeof(prime)); 
 
 	double number_of_primes = 0;
 
