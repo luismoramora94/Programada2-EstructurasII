@@ -1,22 +1,28 @@
-// C++ program to print all primes smaller than or equal to
-// n using Sieve of Eratosthenes
 #include <bits/stdc++.h>
+#include <vector>
+
 using namespace std;
 
-void CribaEratostenes(int n)
+int CribaEratostenes(long double n)
 {
-    bool prime[n+1];
-    memset(prime, true, sizeof(prime));
 
-    for (int p=2; p*p<=n; p++)
-    {
-        if (prime[p] == true)
-        {
-            for (int i=p*2; i<=n; i += p)
+	bool prime[int(n) + 1];
+	memset(prime, true, sizeof(prime))
+
+	double number_of_primes = 0;
+
+
+    for (int p=2; p*p<=n; p++){
+        if (prime[p] == true){
+
+    		for (int i=p*2; i<=n; i += p)
                 prime[i] = false;
         }
     }
-    for (int p=2; p<=n; p++)
-       if (prime[p])
-          cout << p << "\n";
+
+	for(int i = 2; i< n+1; i++){
+		if(prime[i] == true)
+			number_of_primes ++;
+	}
+	return number_of_primes;
 }

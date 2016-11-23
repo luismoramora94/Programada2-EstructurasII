@@ -3,4 +3,3 @@ test:
 	./prueba
 clean:
 		rm prueba
-		rm ./*.o
