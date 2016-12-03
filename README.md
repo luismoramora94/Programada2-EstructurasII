@@ -15,7 +15,7 @@ Para correr la simulación es necesario usar Python 3 en Ubuntu Linux o Windows.
 El programa se debe correr en un terminal dentro de la carpeta /MESI
 ejecutando el comando:
 
-Programada2-EstructurasII/Mesi$  python3 cache_sim.py
+Programada2-EstructurasII/Mesi$       python3 cache_sim.py
 
 No es necesario ponerle argumentos, el programa genera automáticamente sus
 salidas en el archivo logfile muestra todas las instrucciones ejecutadas por
