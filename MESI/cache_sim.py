@@ -32,12 +32,20 @@ i=1
 
 for line in trace.readlines():
     if i%2 == 0:
-        print"CPU1 ejecutando: ", line
+        print("CPU1 ejecutando: ", line)
         CPU1.fetch(line)
+        CPU1.snoop(cacheL1_cpu0, cacheL2, line)
     else:
-        print"CPU0 ejecutando: ", line
+        print("CPU0 ejecutando: ", line)
         CPU0.fetch(line)
+        CPU0.snoop(cacheL1_cpu1, cacheL2, line)
     i+=1
 
 #liberar la memoria
 trace.close()
+
+#Aqui creamos un log file con las ultimas 10 instrucciones ejecutadas por cada
+#CPU respectivamente
+
+cacheL1_cpu0.print_cache('CPU 0: ')
+cacheL1_cpu1.print_cache('CPU 1: ')
