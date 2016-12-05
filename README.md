@@ -26,3 +26,13 @@ cada CPU.
 
 En el reporte se incluyen las últimas 10 instrucciones que cada procesador
 ejecutó y su status según el protocolo MESI(20 instrucciones en total)
+
+# Ejecución de la Criba de Eratóstenes
+
+Para correr el algoritmo de la criba secuencial y su respectivo main, en el directorio del proyecto, ejecutar:
+
+$ make sec
+
+Para correr el algoritmo de la criba en paralelo, y su respectivo main, en el directorio del proyecto ejecutar:
+
+$ make par 
